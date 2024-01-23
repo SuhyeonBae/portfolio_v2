@@ -1,15 +1,15 @@
-$light-green: #ace375;
-$green: #8fe03e;
-$light-yellow: #fc6;
-$yellow: #ffc219;
-$pink: #fa6093;
-$pink-red: #ff0d5e;
+$light-green: #00CD96;
+$green: #009464;
+$light-yellow: #fecf61;
+$yellow: #FFBE22;
+$light-brown: #6e604d;
+$brown: #4F4537;
 $blue: #2b70f0;
 $light-blue: #6092f0;
 
 @keyframes loader-top {
   2.5% {
-    background: $pink;;
+    background: $light-brown;;
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
@@ -19,7 +19,7 @@ $light-blue: #6092f0;
     animation-timing-function: ease-in;
   }
   13.75% {
-    background: $pink-red;
+    background: $brown;
     -moz-transform: rotateY(90deg);
     -ms-transform: rotateY(90deg);
     -webkit-transform: rotateY(90deg);
@@ -140,7 +140,7 @@ $light-blue: #6092f0;
     animation-timing-function: step-start;
   }
   91.26% {
-    background: $pink-red;
+    background: $brown;
     -moz-transform: rotateY(90deg);
     -ms-transform: rotateY(90deg);
     -webkit-transform: rotateY(90deg);
@@ -150,7 +150,7 @@ $light-blue: #6092f0;
     animation-timing-function: ease-in;
   }
   100% {
-    background: $pink;
+    background: $light-brown;
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
@@ -189,14 +189,14 @@ $light-blue: #6092f0;
 }
 @keyframes loader-background {
   0% {
-    background: $pink;
+    background: $light-brown;
     -moz-transform: rotateZ(180deg);
     -ms-transform: rotateZ(180deg);
     -webkit-transform: rotateZ(180deg);
     transform: rotateZ(180deg);
   }
   25% {
-    background: $pink;
+    background: $light-brown;
     -moz-transform: rotateZ(180deg);
     -ms-transform: rotateZ(180deg);
     -webkit-transform: rotateZ(180deg);
@@ -240,14 +240,14 @@ $light-blue: #6092f0;
     animation-timing-function: step-start;
   }
   77.5% {
-    background: $pink;
+    background: $light-brown;
     -moz-transform: rotateZ(270deg);
     -ms-transform: rotateZ(270deg);
     -webkit-transform: rotateZ(270deg);
     transform: rotateZ(270deg);
   }
   100% {
-    background: $pink;
+    background: $light-brown;
     -moz-transform: rotateZ(270deg);
     -ms-transform: rotateZ(270deg);
     -webkit-transform: rotateZ(270deg);
@@ -265,7 +265,7 @@ $light-blue: #6092f0;
   display: inline-block;
   width: 48px;
   height: 48px;
-  background: $pink;
+  background: $light-brown;
   -moz-border-radius: 24px;
   -webkit-border-radius: 24px;
   border-radius: 24px;
@@ -282,7 +282,7 @@ $light-blue: #6092f0;
   animation: loader-background 3s infinite ease-in-out;
 }
 .loader:not(:required)::after {
-  background: $pink;
+  background: $light-brown;
   -moz-border-radius: 24px 0 0 24px;
   -webkit-border-radius: 24px;
   border-radius: 24px 0 0 24px;
@@ -318,11 +318,4 @@ $light-blue: #6092f0;
   -moz-animation: loader-bottom 3s infinite linear;
   -webkit-animation: loader-bottom 3s infinite linear;
   animation: loader-bottom 3s infinite linear;
-}
-
-.logo {
-  width: 80px;
-  height: 80px;
-  border: 1.5px solid black;
-  border-radius: 50%;
 }

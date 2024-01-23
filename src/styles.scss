@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+$ivory: #FFF8F0;
+$dark-brown: #402E32;
+$wood: #B7891C;
+$beige: #FFDCA3;
+@import '@acab/reset.css';
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: $dark-brown;
+    background-color: $ivory;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // color: $ivory;
+    // background-color: $dark-brown;
+    color: $dark-brown;
+    background-color: $ivory;
+  }
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border: 1.5px solid $dark-brown;
+  border-radius: 50%;
+  &:hover, &:focus {
+    cursor: pointer;
+  }
+}

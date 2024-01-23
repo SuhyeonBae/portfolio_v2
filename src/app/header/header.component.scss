@@ -1,0 +1,15 @@
+header {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  nav {
+    ul {
+      display: flex;
+      li {
+        padding: 1rem;
+      }      
+    }
+  }
+}
