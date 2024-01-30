@@ -1,15 +1,76 @@
+@import '/src/assets/custom';
+
 header {
   width: 100%;
   height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem;
   nav {
     ul {
       display: flex;
       li {
-        padding: 1rem;
+        padding: 0 1rem;
+        &:hover, &:focus {
+          cursor: pointer;
+          opacity: 0.7;
+        }
+        &:last-of-type {
+          display: flex;
+          flex-flow: row;
+          &:hover, &:focus {
+            opacity: 1;
+          }
+          img.sun {
+            margin: 0 5px;
+          }
+          img.moon {
+            margin: 0 2px;
+          }
+        }
+        &.active {
+          color: $ivory;
+          background-color: $dark-brown;
+          @include rounded(1rem);
+          &:hover, &:focus {
+            opacity: 1;
+          }
+        }
       }      
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  border: 1.5px solid $dark-brown;
+  @include rounded(1rem);
+  @include breakpoint(xs) {
+    width: 40px;
+    height: 20px;
+    border-width: 2px;
+  }
+  input {
+    position: absolute;
+    appearance: none;
+  }
+  .slider {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 19px;
+    height: 19px;
+    background-color: $dark-brown;
+    cursor: pointer;
+    @include rounded(50%);
+    @include transition(background-color, 300ms);
+    @include breakpoint(xs) {
+      width: 18px;
+      height: 18px;
     }
   }
 }

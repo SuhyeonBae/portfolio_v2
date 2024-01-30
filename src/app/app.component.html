@@ -1,8 +1,7 @@
-<app-header></app-header>
+<app-header (colorScheme)="setMode($event)"></app-header>
 <main>
   <router-outlet></router-outlet>
 </main>
-
 
 <app-add-to-home-screen></app-add-to-home-screen>
 <app-push-notification></app-push-notification>

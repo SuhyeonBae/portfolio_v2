@@ -1,8 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-$ivory: #FFF8F0;
-$dark-brown: #402E32;
-$wood: #B7891C;
-$beige: #FFDCA3;
+@import '/src/assets/custom';
 @import '@acab/reset.css';
 
 @media (prefers-color-scheme: light) {
@@ -19,6 +16,17 @@ $beige: #FFDCA3;
     color: $dark-brown;
     background-color: $ivory;
   }
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-snap-type: y mandatory;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
 }
 
 .logo {

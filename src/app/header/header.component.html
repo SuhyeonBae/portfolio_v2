@@ -1,10 +1,19 @@
 <header>
-  <img class="logo" width="80px" height="80px" src="/assets/logo.svg" alt="logo"/>
+  <img class="logo" width="80px" height="80px" src="/assets/images/logo.svg" alt="logo"/>
   <nav>
     <ul>
-      <li>ABOUT ME</li>
-      <li>EXPERIENCE</li>
-      <li>CONTACT</li>
+      <li routerLink="" routerLinkActive="active">HOME</li>
+      <li routerLink="/about" routerLinkActive="active">ABOUT ME</li>
+      <li routerLink="/experience" routerLinkActive="active">EXPERIENCE</li>
+      <li routerLink="/contact" routerLinkActive="active">CONTACT</li>
+      <li>
+        <img class="sun" width="20" height="20" src="/assets/images/sun.svg" alt="light mode">
+        <label class="switch">
+          <input type="checkbox" [checked]="isDarkMode" (change)="toggleMode()">
+          <span class="slider"></span>
+        </label>
+        <img class="moon" width="20" height="20" src="/assets/images/moon.svg" alt="dark mode">
+      </li>
     </ul>
   </nav>
 </header>

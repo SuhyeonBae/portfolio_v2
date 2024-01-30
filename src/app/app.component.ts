@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio_v2';
+  title = 'Suhyeon Bae';
+
+  setMode(e: any) {
+    console.log(`setMode`, e);
+  }
 }

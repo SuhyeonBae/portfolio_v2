@@ -1,0 +1,33 @@
+@import '/src/assets/custom';
+
+.a2hs-wrapper {
+  position: absolute;
+  right: 1rem;
+  bottom: -10rem;
+  width: fit-content;
+  height: fit-content;
+  background-color: $beige;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  @include transition(bottom, 1s);
+  @include rounded(1rem);
+  &:hover, &:focus {
+    cursor: pointer;
+  }
+  img {
+    margin: 0 0.5rem 0 1rem;
+  }
+  .icn-close {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('/assets/images/close.svg') center center;
+    background-repeat: no-repeat;
+  }
+  &.show {
+    bottom: 1rem;
+  }
+}
