@@ -2,7 +2,7 @@
   <img class="logo" width="80px" height="80px" src="/assets/images/logo.svg" alt="logo"/>
   <nav>
     <ul>
-      <li routerLink="" routerLinkActive="active">HOME</li>
+      <li routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">HOME</li>
       <li routerLink="/about" routerLinkActive="active">ABOUT ME</li>
       <li routerLink="/experience" routerLinkActive="active">EXPERIENCE</li>
       <li routerLink="/contact" routerLinkActive="active">CONTACT</li>

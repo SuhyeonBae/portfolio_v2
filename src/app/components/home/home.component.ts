@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnDestroy, WritableSignal, effect, signal } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
-import { Nl2brPipe } from '../nl2br.pipe';
+import { Nl2brPipe } from '../../nl2br.pipe';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   public charIndex: WritableSignal<number> = signal(0);
   public textArrayIndex: WritableSignal<number> = signal(0);
   public isTyping = false;
-  public typingDelay: number = 200;
+  public typingDelay: number = 150;
   public subscription: Subscription = new Subscription();
 
   ngAfterViewInit() {
@@ -30,7 +30,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   }
 
   public type() {
-    const textArray: Array<string> = ['Think Big', '\r\nStart Small', '\r\nand Have Fun..!!'];
+    const textArray: Array<string> = ['Think Big', '\r\nStart Small', '\r\nAct Now', '\r\nand Have Fun!'];
     if (this.charIndex() < textArray[this.textArrayIndex()].length) {
       this.isTyping = true;
       this.mainText += textArray[this.textArrayIndex()].charAt(this.charIndex());
@@ -43,7 +43,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       if (this.textArrayIndex() < textArray.length) {
         setTimeout(() => {
           this.subscription = interval(this.typingDelay).subscribe(() => this.type());
-        }, this.typingDelay * 2.5)
+        }, this.typingDelay * 5)
       }
     }
   }
